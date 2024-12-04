@@ -1,6 +1,5 @@
 return {
-  'Luxed/ayu-vim',
-  priority = 1000,
+  'Shatur/neovim-ayu',
   config = function()
     vim.cmd.colorscheme = 'ayu'
     vim.cmd.background = 'dark'

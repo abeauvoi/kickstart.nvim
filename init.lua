@@ -216,6 +216,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
@@ -625,9 +626,10 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
-        --
-
+        ts_ls = {},
+        jsonls = {},
+        intelephense = {},
+        emmet_ls = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -966,6 +968,7 @@ require('lazy').setup({
   },
 })
 
+-- [[ Custom config ]]
 require 'custom.config'
 
 -- The line beneath this is called `modeline`. See `:help modeline`

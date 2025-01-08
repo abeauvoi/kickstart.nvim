@@ -61,3 +61,6 @@ vim.keymap.set('n', '<leader>nt', '<cmd>Neotree|<C-w><Left><CR>', { desc = 'Open
 -- [[ Misc ]]
 -- Clearing all buffers but one
 vim.keymap.set('n', '<leader>bx', '<cmd>BufOnly<CR>')
+
+-- Undo highlight after search
+vim.keymap.set('n', '<leader><space>', '<cmd>nohl<CR>', { desc = 'Cancel highlight from search' })

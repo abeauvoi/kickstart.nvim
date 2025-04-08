@@ -414,10 +414,13 @@ require('lazy').setup({
         --   },
         -- },
         pickers = {
+          find_files = {
+            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
+          },
           buffers = {
             mappings = {
               n = {
-                ['<dd>'] = actions.delete_buffer,
+                ['dd'] = actions.delete_buffer,
               },
             },
           },
@@ -677,6 +680,7 @@ require('lazy').setup({
             },
           },
         },
+        yamlls = {},
       }
 
       -- Ensure the servers and tools above are installed
